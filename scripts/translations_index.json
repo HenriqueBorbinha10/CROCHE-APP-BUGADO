@@ -1,0 +1,43 @@
+{
+  "es": {
+    "welcome": "¡Bienvenido a la <span>App Manzana</span>, completa tus datos para generar tu <span>plan personalizado!</span> 🍎",
+    "age": "Edad",
+    "height": "Altura (en cm)",
+    "weight": "Peso (en kg)",
+    "desiredWeight": "Peso deseado (en kg)",
+    "genderQuestion": "¿Cual es tu sexo?",
+    "male": "Masculino",
+    "female": "Femenino",
+    "activityQuestion": "¿Cuál es su nivel de actividad diaria?",
+    "activities": ["Ninguna actividad", "Actividad mínima", "Actividad moderada", "Muy activo", "Extremadamente activo"],
+    "submit": "Entrar"
+  },
+  "fr": {
+    "welcome": "Bienvenue à l'<span>Pomme App</span>, remplissez vos informations pour générer votre <span>plan personnalisé !</span> 🍎",
+    "age": "Âge",
+    "height": "Taille (en cm)",
+    "weight": "Poids (en kg)",
+    "desiredWeight": "Poids désiré (en kg)",
+    "genderQuestion": "Quel est votre sexe ?",
+    "male": "Masculin",
+    "female": "Féminin",
+    "activityQuestion": "Quel est votre niveau d'activité quotidienne ?",
+    "activities" : ["Aucune activité", "Activité minimale", "Activité modérée", "Très actif", "Extrêmement actif"],
+    "submit": "Entrer"
+  },
+  "pt": {
+    "name": "Nome",
+    "email": "Email", 
+    "welcome": "Bem-vindo ao <span>MVL App</span>, preencha seus dados abaixo <span>para continuar!</span> 💲",
+    "age": "Idade",
+    "height": "Altura (em cm)",
+    "weight": "Peso (em kg)",
+    "desiredWeight": "Peso desejado (em kg)",
+    "genderQuestion": "Qual é o seu sexo?",
+    "male": "Masculino",
+    "female": "Feminino",
+    "activityQuestion": "Qual é o seu nível de atividade diária?",
+    "activities" : ["Nenhuma atividade", "Atividade mínima", "Atividade moderada", "Muito ativo", "Extremamente ativo"],
+    "submit": "Entrar"
+  }
+}

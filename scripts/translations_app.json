@@ -1,0 +1,29 @@
+{
+  "es": {
+    "title": "App Manzana",
+    "trucoManzana": "Truco de la Manzana",
+    "verdurasRecomendadas": "Verduras Recomendadas",
+    "tecnicaAfrodita": "La Técnica de Afrodita",
+    "teMilenarioAsiatico": "Té Milenario Asiático",
+    "hormonaAdelgazante": "La Hormona Adelgazante",
+    "tonicoHormonal": "El Tónico Hormonal"
+  },
+  "fr": {
+    "title": "Pomme App",
+    "trucoManzana": "Truc de la Pomme",
+    "verdurasRecomendadas": "Légumes Recommandés",
+    "tecnicaAfrodita": "La Technique d'Aphrodite",
+    "teMilenarioAsiatico": "Thé Millénaire Asiatique",
+    "hormonaAdelgazante": "L'Hormone Minceur",
+    "tonicoHormonal": "Le Tonique Hormonal"
+  },
+  "pt": {
+    "title": "MVL App",
+    "trucoManzana": "Amazon",
+    "verdurasRecomendadas": "Shein",
+    "tecnicaAfrodita": "Shopee",
+    "teMilenarioAsiatico": "Vídeo Lucrativos",
+    "hormonaAdelgazante": "Storys Lucrativos",
+    "tonicoHormonal": "Grupo Exclusivo"
+  }
+}

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap');
+
+body {
+  background-size: 100% 100%
+}
+
+h1 {
+  font: normal 300 1.5rem 'Archivo', sans-serif;
+  padding-bottom: 10px;
+}
+
+h1 span { font: normal 600 1.5rem 'Archivo', sans-serif }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+input {
+  border-radius: 4px;
+  border: 2px solid #C2C2C2;
+  padding: 5px 0 5px 5px;
+}
+
+input::placeholder { font: normal 400 14px 'Archivo', sans-serif }
+
+h2 {
+  margin: 0;
+  padding-top: 10px;
+  font: normal 300 1.2rem 'Archivo', sans-serif;
+  text-align: left;
+}
+
+.alignRadio {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.alignRadioItem {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font: normal 300 1rem 'Archivo', sans-serif;
+}
+
+select {
+  border-radius: 4px;
+  border: 2px solid #C2C2C2;
+  font: normal 300 0.9rem 'Archivo', sans-serif;
+  padding: 5px 0 5px 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  height: 40px;
+  font: normal 500 1.1rem 'Archivo', sans-serif;
+  border: none;
+  border-radius: 10px;
+  background: #7ED956;
+  cursor: pointer;
+}
+
+button:hover {
+  border: solid 1px #000;
+}
+
+@media (min-width: 951px) {
+  body { background: url(../assets/images/bgDesktop.png) no-repeat fixed center }
+
+  main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+    max-width: 400px;
+    width: 40vw;
+    background-color: #FFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 32px;
+  }
+
+  img {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  body {
+    background-color: #FFF;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  img {
+    margin: 2vh auto;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 10px;
+  }
+}

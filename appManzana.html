@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles/appManzana.css">
+  <link id="logo" rel="shortcut icon">
+  <link rel="manifest" href="scripts/manifest.json"/>
+  <title id="title"></title>
+</head>
+<body>
+  <header>
+    <img id="logoSemFundo" alt="Logo App Manzana">
+  </header>
+
+  <div class="slider-container">
+    <div class="slider">
+      <img id="imageApp2">
+      <img id="imageApp3">
+      <img id="imageApp4">
+    </div>
+    <button class="slider-btn prev">&#8249;</button>
+    <button class="slider-btn next">&#8250;</button>
+  </div>
+
+  <main>
+    <section onclick="redirectToPage('truco_manzana')">
+      <img id="iconMaca">
+      <p id="trucoManzana"></p>
+    </section>
+
+    <section onclick="redirectToPage('verduras_recomendadas')">
+      <img id="iconsVegetais">
+      <p id="verdurasRecomendadas"></p>
+    </section>
+
+    <section onclick="redirectToPage('afrodite')">
+      <img id="iconsRosa">
+      <p id="tecnicaAfrodita"></p>
+    </section>
+
+    <section onclick="window.location.href='https://drive.google.com/drive/folders/1gsUhTqVGkncodPCe0cnGQXwtzbaTL0YD?usp=sharing'">
+      <img id="iconsChaVerde">
+      <p id="teMilenarioAsiatico"></p>
+    </section>
+
+    <section onclick="window.location.href='https://drive.google.com/drive/folders/1TqtqHxRxf8JfXoriWGzVUyHDcMDX62sr?usp=sharing'">
+      <img id="iconsPerdaPeso">
+      <p id="hormonaAdelgazante"></p>
+    </section>
+
+    <section onclick="window.location.href='https://go.perfectpay.com.br/PPU38CP57ER'">
+      <img id="iconsMusculo">
+      <p id="tonicoHormonal"></p>
+    </section>
+
+    <!-- <section id="iconsWpp" onclick="window.location.href='https://go.perfectpay.com.br/PPU38CP3PGJ'">
+      <img src="assets/images_pt/bum_bum_nuca.png">
+      <p>BumBum na Nuca</p>
+    </section>
+
+    <section id="iconsBumBum" onclick="window.location.href='https://go.perfectpay.com.br/PPU38CP57ER'">
+      <img src="assets/images_pt/wpp.png">
+      <p>Grupo Exclusivo</p>
+    </section> -->
+  </main>
+
+</body>
+<script>
+    function redirectToPage(ebook) {
+    window.location.href = `ebook.html?ebook=${ebook}`;
+  }
+
+  const slider = document.querySelector(".slider");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  const imgWidth = 100;
+  let currentIndex = 0;
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + 3) % 3;
+    updateSliderPosition();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % 3;
+    updateSliderPosition();
+  });
+
+  function updateSliderPosition() {
+    const newPosition = -currentIndex * imgWidth;
+    slider.style.transform = `translateX(${newPosition}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % 3;
+    updateSliderPosition();
+  }
+
+  setInterval(nextSlide, 2000);
+</script>
+<script src="scripts/lang_app.js"></script>
+</html>

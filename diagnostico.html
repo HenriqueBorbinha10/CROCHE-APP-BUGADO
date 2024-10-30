@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles/diagnostico.css">
+  <link id="logo" rel="shortcut icon">
+  <link rel="manifest" href="scripts/manifest.json"/>
+  <title id="page-title"></title>
+</head>
+<body>
+  <h1 id="header-text"></h1>
+
+  <button id="main-button" onclick="location.href='appManzana.html'"></button>
+
+  <main>
+    <section>
+      <h2 id="calories-title"></h2>
+      <h3><span id="resultadoCalorias"></span> <span id="calories-unit"></span></h3>
+      <h4 id="recommended-amount-calories"></h4>
+      <h5><span id="descResultadoCalorias"></span>kcal</h5>
+    </section>
+
+    <section>
+      <h2 id="fats-title"></h2>
+      <h3><span id="resultadoGorduras"></span> <span id="fats-unit"></span></h3>
+      <h4 id="recommended-amount-fats"></h4>
+      <h5><span id="descResultadoGorduras"></span>g</h5>
+    </section>
+
+    <section>
+      <h2 id="proteins-title"></h2>
+      <h3><span id="resultadoProteinas"></span> <span id="proteins-unit"></span></h3>
+      <h4 id="recommended-amount-proteins"></h4>
+      <h5><span id="descResultadoProteinas"></span>g</h5>
+    </section>
+
+    <section>
+      <h2 id="carbs-title"></h2>
+      <h3><span id="resultadoCarboidratosDiarios"></span> <span id="carbs-unit"></span></h3>
+      <h4 id="recommended-amount-carbs"></h4>
+      <h5><span id="descResultadoCarboidratosDiarios"></span>g</h5>
+    </section>
+
+    <section>
+      <h2 id="water-title"></h2>
+      <h3 class="resultadoPrincipal"><span id="resultadoQuantidadeAgua"></span> <span id="water-unit">L</span></h3>
+      <h4 id="recommended-amount-water"></h4>
+      <h5 class="subResultadoPrincipal"><span id="descResultadoQuantidadeAgua"></span> <span id="water-subunit">L</span></h5>
+    </section>
+
+    <section>
+      <h2 id="bmi-title"></h2>
+      <h3 class="resultadoPrincipal"><span id="resultadoIMC"></span></h3>
+      <h4 id="bmi-status-title"></h4>
+      <h5 class="subResultadoPrincipal"><span id="statusIMC"></span></h5>
+    </section>
+  </main>
+
+  <button id="main-button-footer" onclick="location.href='appManzana.html'"></button>
+
+  <script>
+    localStorage.setItem('resultado', 'sim');
+  </script>
+  <script>
+    // Pegar os dados do localStorage
+    const caloriasDiarias = localStorage.getItem('caloriasDiarias');
+    const descCaloriasDiarias = localStorage.getItem('descCaloriasDiarias');
+
+    const gordurasDiarias = localStorage.getItem('gramasGorduras');
+    const descGordurasDiarias = localStorage.getItem('descGramasGorduras');
+
+    const proteinasDiarias = localStorage.getItem('gramasProteinas');
+    const descProteinasDiarias = localStorage.getItem('descGramasProteinas');
+
+    const carboidratosDiarios = localStorage.getItem('gramasCarboidratos');
+    const descCarboidratosDiarios = localStorage.getItem('descGramasCarboidratos');
+
+    const quantidadeAgua = localStorage.getItem('quantidadeAgua');
+    const descQuantidadeAgua = localStorage.getItem('descQuantidadeAgua');
+
+    const imc = localStorage.getItem('resultadoIMC');
+  
+    // Atualizar os spans com os resultados
+    document.getElementById('resultadoCalorias').textContent = caloriasDiarias;
+    document.getElementById('descResultadoCalorias').textContent = descCaloriasDiarias;
+
+    document.getElementById('resultadoGorduras').textContent = gordurasDiarias;
+    document.getElementById('descResultadoGorduras').textContent = descGordurasDiarias;
+
+    document.getElementById('resultadoProteinas').textContent = proteinasDiarias;
+    document.getElementById('descResultadoProteinas').textContent = descProteinasDiarias;
+    
+    document.getElementById('resultadoCarboidratosDiarios').textContent = carboidratosDiarios;
+    document.getElementById('descResultadoCarboidratosDiarios').textContent = descCarboidratosDiarios;
+
+    document.getElementById('resultadoQuantidadeAgua').textContent = quantidadeAgua;
+    document.getElementById('descResultadoQuantidadeAgua').textContent = descQuantidadeAgua;
+
+    document.getElementById('resultadoIMC').textContent = imc;
+    loadTranslationsIMC();
+
+    function loadTranslationsIMC() {
+      fetch('scripts/translations_diagnostico.json')
+        .then(response => response.json())
+        .then(translations => {
+          let status = '';
+          const lang = (navigator.language || navigator.userLanguage || 'es').split('-')[0];
+          const selectedLang = translations[lang] || translations['es'];
+          console.log('Teste linguagem: ', lang);
+          if (imc < 18.5) {
+              status = selectedLang.bmi_underweight;
+          } else if (imc < 24.9) {
+              status = selectedLang.bmi_normal;
+          } else if (imc < 29.9) {
+              status = selectedLang.bmi_overweight;
+          } else {
+              status = selectedLang.bmi_obesity;
+          }
+          document.getElementById('statusIMC').textContent = status;
+        })
+        .catch(error => console.error('Erro ao carregar traduções IMC:', error));
+    }
+  </script>
+  <script src="scripts/lang_diagnostico.js"></script>
+</body>
+</html>

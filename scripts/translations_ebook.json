@@ -1,0 +1,20 @@
+{
+  "es": {
+    "pageTitle": "El Truco de la Manzana",
+    "backButton": "Volver",
+    "mainHeading": "¡Haga clic aquí y descárguelo! ¡Este es tu plan exclusivo y único! ¡Solo se imprimirá una <br>🔽vez!🔽",
+    "ebookText": "TRUCO DE LA MANZANA"
+  },
+  "fr": {
+    "pageTitle": "Le Truc de la Pomme",
+    "backButton": "Retour",
+    "mainHeading": "Cliquez ici et téléchargez-le ! C'est votre plan exclusif et unique ! Il sera imprimé seulement une <br>🔽fois !🔽",
+    "ebookText": "TRUC DE LA POMME"
+  },
+  "pt": {
+    "pageTitle": "MVL App",
+    "backButton": "Voltar",
+    "mainHeading": "Clique aqui e faça o download! Este é o método exclusivo e único! Será impresso apenas uma <br>🔽vez!🔽",
+    "ebookText": "DÓLAR APP"
+  }
+}
