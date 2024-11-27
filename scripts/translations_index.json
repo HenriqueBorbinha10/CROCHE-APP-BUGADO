@@ -1,6 +1,6 @@
 {
   "es": {
-    "welcome": "¡Bienvenida a <span>Pack Crochet</span>, completa tus datos para generar tu <span>plan personalizado!</span> 🧶",
+    "welcome": "¡Bienvenida a <span>Pack Crochet</span>, complete sus datos abajo <span>para continuar!</span> 🧶",
     "age": "Edad",
     "height": "Altura (en cm)",
     "weight": "Peso (en kg)",
@@ -28,7 +28,7 @@
   "pt": {
     "name": "Nome",
     "email": "Email", 
-    "welcome": "Bem-vindo ao <span>Crochê App</span>, preencha seus dados abaixo <span>para continuar!</span> 💲",
+    "welcome": "Bem-vinda ao <span>Pack Crochê</span>, preencha seus dados abaixo <span>para continuar!</span> 🧶",
     "age": "Idade",
     "height": "Altura (em cm)",
     "weight": "Peso (em kg)",
