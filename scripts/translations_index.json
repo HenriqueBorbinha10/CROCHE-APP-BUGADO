@@ -1,5 +1,7 @@
 {
   "es": {
+    "name": "Nome",
+    "email": "Email", 
     "welcome": "¡Bienvenida a <span>Pack Crochet</span>, complete sus datos abajo <span>para continuar!</span> 🧶",
     "age": "Edad",
     "height": "Altura (en cm)",
